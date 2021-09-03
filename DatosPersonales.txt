@@ -1,4 +1,4 @@
-Nombres de Integrantes:
+﻿Nombres de Integrantes:
 1.Josué Valle 
 2. Brian Solano
 3. Edgar Sinay
@@ -6,3 +6,4 @@ Nombres de Integrantes:
 5. Christofer Veliz
 6. Juan Quino
 7. Walter Sactic
+8. Douglas Serrano 
