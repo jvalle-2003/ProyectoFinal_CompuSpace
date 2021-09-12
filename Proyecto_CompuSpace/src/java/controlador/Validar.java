@@ -19,6 +19,7 @@ import modelo.EmpleadoDAO;
  * @author Alejandro
  */
 public class Validar extends HttpServlet {
+
     EmpleadoDAO empleadoDao = new EmpleadoDAO();
     Empleado empleado = new Empleado();
 
@@ -39,7 +40,7 @@ public class Validar extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Validar</title>");            
+            out.println("<title>Servlet Validar</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Validar at " + request.getContextPath() + "</h1>");
@@ -74,32 +75,32 @@ public class Validar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         //Capturar la peticion del Usuario
         String accion = request.getParameter("accion");
-        if(accion.equalsIgnoreCase("Ingresar")){
+        if (accion.equalsIgnoreCase("Ingresar")) {
             String user = request.getParameter("txtUser");//Capturar el usuario y contraseña index.jsp
             String pass = request.getParameter("txtPass");
-//            empleado = empleadoDao.validar(user, pass);
-//            if (empleado.getUsuario()!= null){
-//                request.setAttribute("usuario", empleado);
-//                request.getRequestDispatcher("Controlador?menu=Principal").forward(request, response);
-//            }else{
-//                request.getRequestDispatcher("index.jsp").forward(request, response);
-//            }
-//        }else{
-//            request.getRequestDispatcher("index.jsp").forward(request, response);
-//        }
-    }
+            empleado = empleadoDao.validar(user, pass);
+            if (empleado.getUsuario() != null) {
+                request.setAttribute("usuario", empleado);
+                request.getRequestDispatcher("Controlador?menu=Principal").forward(request, response);
+            } else {
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
+        } else {
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+        }
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
+
+/**
+ * Returns a short description of the servlet.
+ *
+ * @return a String containing servlet description
+ */
+@Override
+        public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
 
