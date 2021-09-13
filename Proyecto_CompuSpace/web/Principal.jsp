@@ -30,7 +30,7 @@
                         <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=Empleado&accion=Listar" target="myFrame">Empleado</a>
                     </li>
                     <li class="nav-item">
-                        <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=Clientes" target="myFrame">Clientes</a>
+                        <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=Cliente&accion=Listar" target="myFrame">Clientes</a>
                     </li>
                     <li class="nav-item">
                         <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=NuevaVenta" target="myFrame">Nueva Venta</a>
@@ -48,7 +48,7 @@
             </button>
             <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">
-                    <img src="img/usuario.png" alt="" width="60"/>  
+                    <img src="img/Login.jpg" alt="" width="60"/>  
                 </a>
                 <a class="dropdown-item" href="#">${usuario.getUsuario()}</a>
                 <a class="dropdown-item" href="#">usuario@gmail.com</a>
@@ -81,4 +81,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     </body>
 </html>
-
