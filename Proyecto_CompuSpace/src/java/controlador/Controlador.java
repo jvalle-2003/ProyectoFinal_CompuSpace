@@ -12,6 +12,8 @@ import modelo.ClienteDAO;
 import modelo.Empleado;
 import modelo.EmpleadoDAO;
 import modelo.Producto;
+import modelo.ProductoDAO;
+
 
 /**
  *
@@ -22,9 +24,12 @@ public class Controlador extends HttpServlet {
     EmpleadoDAO empleadoDao = new EmpleadoDAO();
     Cliente cliente = new Cliente();
     ClienteDAO clienteDao = new ClienteDAO();
+    Producto producto = new Producto();
+    ProductoDAO productoDao = new ProductoDAO();
     
     int codEmpleado;
     int codCliente;
+    int codProducto;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
