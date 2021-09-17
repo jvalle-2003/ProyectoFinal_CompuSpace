@@ -57,6 +57,12 @@ public class Producto {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+<<<<<<< HEAD
+
+    
+   
+=======
    
     
+>>>>>>> develop
 }

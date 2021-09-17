@@ -67,18 +67,33 @@ insert into Cliente(DPICliente, nombresCliente, direccionCliente, estado)
  values('12345673453454', 'Brian Zepeda', 'Zona 4, Guatemala', '1');
  
  insert into Empleado(DPIEmpleado, nombresEmpleado, telefonoEmpleado, estado, usuario) 
+<<<<<<< HEAD
+ values('4579342483943', 'Carlos Valle', '53239288', '1', 'cvalle');
+  insert into Empleado(DPIEmpleado, nombresEmpleado, telefonoEmpleado, estado, usuario) 
+ values('4938283475892', 'Edgar Sinay', '32830011', '1', 'esinay');
+
+insert into Producto(nombreProducto, precio, stock, estado) 
+values('Teclado redragon k552', '469.00',25 , '1');
+=======
  values('2893829291021', 'Carlos Valle', '123123', '1', 'cvalle');
   insert into Empleado(DPIEmpleado, nombresEmpleado, telefonoEmpleado, estado, usuario) 
  values('2483293848293', 'Edgar Sinay', '1333332', '1', 'esinay');
 
 insert into Producto(nombreProducto, precio, stock, estado) 
 values('Teclado redragon k552', '125.00',25 , '1');
+>>>>>>> develop
 insert into Producto(nombreProducto, precio, stock, estado) 
 values('Monitor AOC 24G2', '900.00', 35, '1');
 
 select * from Cliente;
 select * from Empleado;
 select * from Producto;
+
+Select * from empleado where usuario = 'esinay' and DPIEmpleado = '4938283475892';
+
+select * from empleado where codigoEmpleado = 2;
+
+select * from cliente where codigoCliente = 2;
 
 
 Select * from empleado where usuario = 'esinay' and DPIEmpleado = '2483293848293';
