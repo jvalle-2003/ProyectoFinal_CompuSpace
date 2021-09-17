@@ -27,7 +27,7 @@ public List listar(){
             Producto pr = new Producto();
             pr.setCodigoProducto(rs.getInt(1));
             pr.setNombreProducto(rs.getString(2));
-            pr.setPrecio(rs.getDouble(3));
+            pr.setPrecioProducto(rs.getDouble(3));
             pr.setStock(rs.getInt(4));
             pr.setEstado(rs.getString(5));
             listaProducto.add(pr);
@@ -45,7 +45,7 @@ public List listar(){
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
             ps.setString(1, pr.getNombreProducto());
-            ps.setDouble(2, pr.getPrecio());
+            ps.setDouble(2, pr.getPrecioProducto());
             ps.setInt(3, pr.getStock());
             ps.setString(4, pr.getEstado());
             ps.executeUpdate();    
@@ -68,7 +68,7 @@ public List listar(){
             rs = ps.executeQuery();
             while(rs.next()){
                 pr.setNombreProducto(rs.getString(2));
-                pr.setPrecio(rs.getDouble(3));
+                pr.setPrecioProducto(rs.getDouble(3));
                 pr.setStock(rs.getInt(4));
                 pr.setEstado(rs.getString(5));
             }
@@ -87,7 +87,7 @@ public List listar(){
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
             ps.setString(1, pr.getNombreProducto());
-            ps.setDouble(2, pr.getPrecio());
+            ps.setDouble(2, pr.getPrecioProducto());
             ps.setInt(3, pr.getStock());
             ps.setString(4, pr.getEstado());
             ps.setInt(5, pr.getCodigoProducto());
