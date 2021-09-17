@@ -23,7 +23,7 @@
                         </div>
                         <div class="form-group">
                             <label>Precio: </label>
-                            <input type="text" value="${producto.getPrecio()}" name="txtPrecio" class="form-control" >
+                            <input type="text" value="${producto.getPrecioProducto()}" name="txtPrecio" class="form-control" >
                         </div>
                         <div class="form-group">
                             <label>Stock: </label>
@@ -33,8 +33,8 @@
                             <label>Estado:</label>
                             <input type="text" value="${producto.getEstado()}" name="txtEstado" class="form-control" >
                         </div>
-                        <input type="submit" name="accion" value="Agregar" class="btn btn-info">
-                        <input type="submit" name="accion" value="Actualizar" class="btn btn-success">
+                        <input type="submit" name="accion" value="Agregar" class="btn btn-outline-warning">
+                        <input type="submit" name="accion" value="Actualizar" class="btn btn-outline-danger">
                     </form>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                         <tr>
                             <td>${producto.getCodigoProducto()}</td>
                             <td>${producto.getNombreProducto()}</td>
-                            <td>${producto.getPrecio()}</td>
+                            <td>${producto.getPrecioProducto()}</td>
                             <td>${producto.getStock()}</td>
                             <td>${producto.getEstado()}</td>
                             <td>
@@ -72,4 +72,4 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>                
     </body>
-</html>>
+</html>

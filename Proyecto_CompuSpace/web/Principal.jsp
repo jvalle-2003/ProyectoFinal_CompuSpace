@@ -15,13 +15,13 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
 
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="#">Home</a>
+                    <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="#">CompuSpace</a>
                 </li>
                 <li class="nav-item">
                     <a style="margin-left: 10px; border: none" class="btn btn-outline-light" href="Controlador?menu=Producto&accion=Listar" target="myFrame">Producto</a>
@@ -48,7 +48,7 @@
             </button>
             <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">
-                    <img src="img/Login.jpg" alt="" width="60"/>  
+                    <img src="img/usuario.png" alt="" width="60"/>  
                 </a>
                 <a class="dropdown-item" href="#">${usuario.getUsuario()}</a>
                 <a class="dropdown-item" href="#">usuario@gmail.com</a>

@@ -168,49 +168,53 @@ public class Controlador extends HttpServlet {
                
             } 
             request.getRequestDispatcher("Clientes.jsp").forward(request,response);
-          } else if (menu.equals("Producto")) {
-             switch (accion) {
+          } else if (menu.equals("Producto")){
+            switch (accion) {
                 case "Listar":
-                    List listaProducto = productoDao.listar();
-                    request.setAttribute("productos", listaProducto);
+                    List listaProductos = productoDao.listar();
+                    request.setAttribute("productos", listaProductos);
                     break;
+
                 case "Agregar":
-                    String nombreProducto = request.getParameter("txtNombreProducto");
-                    Double precio = Double.parseDouble(request.getParameter("txtPrecio"));
-                    int stock = Integer.parseInt(request.getParameter("txtStock"));
-                    String estado = request.getParameter("txtEstado");
-                    producto.setNombreProducto(nombreProducto);
-                    producto.setPrecio(precio);
-                    producto.setStock(stock);
-                    producto.setEstado(estado);
+                    String nombres = request.getParameter("txtNombreProducto");
+                    String precio = request.getParameter("txtPrecio");
+                    String stock = request.getParameter("txtStock");
+                    String est = request.getParameter("txtEstado");
+                    producto.setNombreProducto(nombres);
+                    producto.setPrecioProducto(Double.parseDouble(precio));
+                    producto.setStock(Integer.parseInt(stock));
+                    producto.setEstado(est);
                     productoDao.agregar(producto);
                     request.getRequestDispatcher("Controlador?menu=Producto&accion=Listar").forward(request, response);
                     break;
+
                 case "Editar":
                     codProducto = Integer.parseInt(request.getParameter("codigoProducto"));
                     Producto p = productoDao.listarCodigoProducto(codProducto);
                     request.setAttribute("producto", p);
                     request.getRequestDispatcher("Controlador?menu=Producto&accion=Listar").forward(request, response);
                     break;
+
                 case "Actualizar":
-                    String nombreProduc= request.getParameter("txtNombreProducto");
-                    Double precioProduc = Double.parseDouble(request.getParameter("txtPrecio"));
-                    int stockProduc = Integer.parseInt(request.getParameter("txtStock"));
-                    String estadoProduc = request.getParameter("txtEstado");
-                    producto.setNombreProducto(nombreProduc);
-                    producto.setPrecio(precioProduc);
-                    producto.setStock(stockProduc);
-                    producto.setEstado(estadoProduc);
-                    productoDao.agregar(producto);
+                    String nombresPro = request.getParameter("txtNombreProducto");
+                    String precioPro = request.getParameter("txtPrecio");
+                    String stockPro = request.getParameter("txtStock");
+                    String estPro = request.getParameter("txtEstado");
+                    producto.setNombreProducto(nombresPro);
+                    producto.setPrecioProducto(Double.parseDouble(precioPro));
+                    producto.setStock(Integer.parseInt(stockPro));
+                    producto.setEstado(estPro);
+                    producto.setCodigoProducto(codProducto);
+                    productoDao.actualizar(producto);
                     request.getRequestDispatcher("Controlador?menu=Producto&accion=Listar").forward(request, response);
                     break;
+
                 case "Eliminar":
                     codProducto = Integer.parseInt(request.getParameter("codigoProducto"));
                     productoDao.eliminar(codProducto);
                     request.getRequestDispatcher("Controlador?menu=Producto&accion=Listar").forward(request, response);
                     break;
-            }
-
+                     }
             request.getRequestDispatcher("Producto.jsp").forward(request, response);
         }else if(menu.equals("NuevaVenta")){
             switch (accion) {
