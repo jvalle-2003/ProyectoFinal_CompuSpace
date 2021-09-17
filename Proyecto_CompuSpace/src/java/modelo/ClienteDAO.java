@@ -15,6 +15,25 @@ public class ClienteDAO {
     int resp;
     
     // OPERACIONES DEL CRUD
+    public Cliente buscar(String dpi) {
+        Cliente cl = new Cliente();
+        String sql = "select * from Cliente where DPICliente =" + dpi;
+        try {
+            con = cn.Conexion();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                cl.setCodigoCliente(rs.getInt(1));
+                cl.setDPICliente(rs.getString(2));
+                cl.setNombresCliente(rs.getString(3));
+                cl.setDireccionCliente(rs.getString(4));
+                cl.setEstado(rs.getString(5));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return cl;
+    }
 // METODO LISTAR
     
     public Cliente validar (String nombresCliente, String DPICliente){
