@@ -19,7 +19,7 @@
                     <form action="Controlador?menu=Cliente" method="POST"> 
                         <div class="form-group">
                             <label>DPI:</label>
-                            <input type="text"  value="${clientes.getCodigoCliente()}" name="txtDPICliente" class="form-control" >
+                            <input type="text"  value="${clientes.getDPICliente()}" name="txtDPICliente" class="form-control" >
                         </div>
                         <div class="form-group">
                             <label>Nombres:</label>

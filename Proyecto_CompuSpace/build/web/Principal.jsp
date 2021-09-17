@@ -48,7 +48,7 @@
             </button>
             <div class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">
-                    <img src="img/Login.jpg" alt="" width="60"/>  
+                    <img src="img/usuario.png" alt="" width="60"/>  
                 </a>
                 <a class="dropdown-item" href="#">${usuario.getUsuario()}</a>
                 <a class="dropdown-item" href="#">usuario@gmail.com</a>
