@@ -21,14 +21,14 @@
                             <label>Datos del cliente:</label>
                             <div class="input-group mb-3">
                                 <input type="text" name="txtCodigoCliente" value="${cliente.getDPICliente()}" class="form-control" placeholder="Codigo" aria-describedby="button-addon2">
-                                <button type="submit" name="accion" value="BuscarCliente"  class="btn btn-outline-primary" id="button-addon2">Buscar</button>
+                                <button type="submit" name="accion" value="BuscarCliente"  class="btn btn-outline-warning" id="button-addon2">Buscar</button>
                                 <input type="text" name="txtNombresCliente" value="${cliente.getNombresCliente()}" class="form-control" placeholder="Cliente" disabled>
                             </div>
 
                             <label>Datos del producto:</label>
                             <div class="input-group mb-3">
                                 <input type="text" name="txtCodigoProducto" value="${producto.getCodigoProducto()}" class="form-control" placeholder="Codigo" aria-describedby="button-addon2">
-                                <button type="submit" name="accion" value="BuscarProducto"  class="btn btn-outline-primary" id="button-addon2">Buscar</button>
+                                <button type="submit" name="accion" value="BuscarProducto"  class="btn btn-outline-warning" id="button-addon2">Buscar</button>
                                 <input type="text" name="txtNombreProducto" value="${producto.getNombreProducto()}" class="form-control" placeholder="Producto">
                             </div>
 
@@ -38,7 +38,7 @@
                                 <input type="text" name="txtStock" value="${producto.getStock()}" class="form-control" placeholder="Stock" disabled>
                             </div>
                         </div>
-                        <button type="submit" name="accion" value="Agregar" class="btn btn-outline-primary" style="margin-top: 15px">Agregar producto</button>
+                        <button type="submit" name="accion" value="Agregar" class="btn btn-warning" style="margin-top: 15px">Agregar producto</button>
                     </form>
                 </div>
             </div>

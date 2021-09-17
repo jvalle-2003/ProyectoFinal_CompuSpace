@@ -34,8 +34,8 @@
                             <input type="text" value="${clientes.getEstado()}" name="txtEstado" class="form-control" >
                         </div>
                        
-                        <input type="submit" name="accion" value="Agregar" class="btn btn-info">
-                        <input type="submit" name="accion" value="Actualizar" class="btn btn-success">
+                        <input type="submit" name="accion" value="Agregar" class="btn btn-outline-warning">
+                        <input type="submit" name="accion" value="Actualizar" class="btn btn-outline-danger">
                     </form>
                 </div>
             </div>
